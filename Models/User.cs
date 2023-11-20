@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace FlightStatusAPI.Models
+namespace FlightStatusControlAPI.Models
 {
     public class User
     {

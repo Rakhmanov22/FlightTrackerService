@@ -1,4 +1,4 @@
-﻿namespace FlightStatusAPI.Models
+﻿namespace FlightStatusControlAPI.Models
 {
     public class FlightStatusUpdateModel
     {

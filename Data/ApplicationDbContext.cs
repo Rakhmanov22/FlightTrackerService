@@ -1,8 +1,8 @@
-﻿using FlightStatusAPI.Models;
+﻿using FlightStatusControlAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace FlightStatusAPI.Data
+namespace FlightStatusControlAPI.Data
 {
     public class ApplicationDbContext : DbContext
     {

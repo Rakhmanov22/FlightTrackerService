@@ -1,11 +1,10 @@
-﻿using FlightStatusAPI.Abstractions;
-using FlightStatusAPI.Data;
-using FlightStatusAPI.Models;
+﻿using FlightStatusControlAPI.Abstractions;
+using FlightStatusControlAPI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace FlightStatusAPI.Controllers
+namespace FlightStatusControlAPI.Controllers
 {
     [Authorize]
     [ApiController]
@@ -47,7 +46,7 @@ namespace FlightStatusAPI.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Moderator")]
+        [AllowAnonymous]
         public IActionResult AddFlight([FromBody] Flight flight)
         {
             // Валидация и добавление нового рейса
@@ -60,4 +59,3 @@ namespace FlightStatusAPI.Controllers
         }
     }
 }
-

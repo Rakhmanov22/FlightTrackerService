@@ -1,8 +1,8 @@
-﻿using FlightStatusAPI.Abstractions;
-using FlightStatusAPI.Models;
+﻿using FlightStatusControlAPI.Abstractions;
+using FlightStatusControlAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FlightStatusAPI.Data.Repositories
+namespace FlightStatusControlAPI.Data.Repositories
 {
     public class FlightRepository : IFlightRepository
     {

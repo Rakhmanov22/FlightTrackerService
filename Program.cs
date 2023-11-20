@@ -1,8 +1,11 @@
-using FlightStatusAPI.Abstractions;
-using FlightStatusAPI.Data;
-using FlightStatusAPI.Data.Repositories;
+using FlightStatusControlAPI.Abstractions;
+using FlightStatusControlAPI.Data;
+using FlightStatusControlAPI.Data.Repositories;
+using FlightStatusControlAPI.Models;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,10 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog();
+
+//Add FluentValidation
+builder.Services.AddControllers()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<FlightValidator>());
 
 // Add services to the container.
 builder.Services.AddControllers();

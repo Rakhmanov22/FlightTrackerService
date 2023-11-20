@@ -1,6 +1,6 @@
-﻿using FlightStatusAPI.Models;
+﻿using FlightStatusControlAPI.Models;
 
-namespace FlightStatusAPI.Abstractions
+namespace FlightStatusControlAPI.Abstractions
 {
     public interface IFlightRepository
     {
