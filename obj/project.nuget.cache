@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "UJNWkl5c3Q1YjxEFHhTIh29//RCUYYH9SuJ6s1RrKCww6x8OJSt3T2s9+Cwt5nIfBudj7RN2ySg6FNDqqGrrqA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AKERKE\\source\\repos\\FlightStatusControlAPI\\FlightStatusControlAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AKERKE\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\AKERKE\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\AKERKE\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\AKERKE\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\AKERKE\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\AKERKE\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
