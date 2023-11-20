@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LFtqWF1nLSiOu8ar+Hfb6rxO8Z/Yt9TGcVoxc+LSFa4=",
+  "Source": "FlightStatusControlAPI",
+  "BasePath": "_content/FlightStatusControlAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

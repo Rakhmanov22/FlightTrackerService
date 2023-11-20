@@ -1,4 +1,6 @@
+using FlightStatusAPI.Abstractions;
 using FlightStatusAPI.Data;
+using FlightStatusAPI.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,9 +12,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Add Memory cashe
+builder.Services.AddMemoryCache();
+
 //Add DbContext to the container
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
       options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//Add FlightRepository
+builder.Services.AddScoped<IFlightRepository, FlightRepository>();
 
 var app = builder.Build();
 
