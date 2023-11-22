@@ -70,3 +70,5 @@ C:\Users\AKERKE\source\repos\FlightStatusControlAPI\bin\Debug\net6.0\Microsoft.E
 C:\Users\AKERKE\source\repos\FlightStatusControlAPI\bin\Debug\net6.0\Serilog.dll
 C:\Users\AKERKE\source\repos\FlightStatusControlAPI\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
 C:\Users\AKERKE\source\repos\FlightStatusControlAPI\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\AKERKE\source\repos\FlightStatusControlAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\AKERKE\source\repos\FlightStatusControlAPI\bin\Debug\net6.0\Newtonsoft.Json.dll

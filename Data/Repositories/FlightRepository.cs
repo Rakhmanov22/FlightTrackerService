@@ -1,5 +1,6 @@
-﻿using FlightStatusControlAPI.Abstractions;
+﻿using FlightStatusControlAPI.Interfaces;
 using FlightStatusControlAPI.Models;
+using FlightStatusControlAPI.Utils;
 using Microsoft.EntityFrameworkCore;
 
 namespace FlightStatusControlAPI.Data.Repositories
@@ -7,7 +8,7 @@ namespace FlightStatusControlAPI.Data.Repositories
     public class FlightRepository : IFlightRepository
     {
         private readonly ApplicationDbContext _dbContext;
-
+        
         public FlightRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -33,6 +34,11 @@ namespace FlightStatusControlAPI.Data.Repositories
         public Flight GetFlightById(int id)
         {
             return _dbContext.Flights.Find(id);
+        }
+
+        public Role GetRoleById(int id)
+        {
+            return _dbContext.Roles.Find(id);
         }
 
         public void AddFlight(Flight flight)

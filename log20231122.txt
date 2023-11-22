@@ -1,0 +1,555 @@
+2023-11-22 10:10:55.516 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 10:10:55.532 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 15.7769ms
+2023-11-22 10:10:55.538 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 10:10:55.577 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.0377ms
+2023-11-22 10:10:55.848 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 10:10:55.855 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.9007ms
+2023-11-22 11:32:06.540 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 11:32:07.056 +06:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 11:32:07.100 +06:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 11:32:07.104 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 11:32:07.104 +06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 11:32:07.134 +06:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-22 11:32:07.153 +06:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-22 11:32:07.293 +06:00 [INF] User profile is available. Using 'C:\Users\AKERKE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-22 11:32:07.515 +06:00 [INF] Now listening on: https://localhost:7246
+2023-11-22 11:32:07.515 +06:00 [INF] Now listening on: http://localhost:5246
+2023-11-22 11:32:07.519 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-22 11:32:07.519 +06:00 [INF] Hosting environment: Development
+2023-11-22 11:32:07.519 +06:00 [INF] Content root path: C:\Users\AKERKE\source\repos\FlightStatusControlAPI\
+2023-11-22 11:32:07.862 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-11-22 11:32:08.122 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 264.6428ms
+2023-11-22 11:32:08.141 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 11:32:08.141 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 11:32:08.147 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 5.7352ms
+2023-11-22 11:32:08.160 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.6828ms
+2023-11-22 11:32:08.222 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 11:32:08.341 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.9504ms
+2023-11-22 11:32:22.836 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/User/token application/json 46
+2023-11-22 11:32:22.963 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 11:32:23.000 +06:00 [INF] Route matched with {action = "GetToken", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetToken(FlightStatusControlAPI.Models.LoginModel) on controller FlightStatusControlAPI.Controllers.UserController (FlightStatusControlAPI).
+2023-11-22 11:32:23.087 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 11:32:23.584 +06:00 [INF] Executed DbCommand (36ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-22 11:32:23.639 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[ID], [u].[Password], [u].[RoleId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)
+2023-11-22 11:32:23.716 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[ID], [r].[Code]
+FROM [Roles] AS [r]
+WHERE [r].[ID] = @__p_0
+2023-11-22 11:32:23.893 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-11-22 11:32:23.902 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI) in 895.4286ms
+2023-11-22 11:32:23.903 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 11:32:23.908 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/User/token application/json 46 - 200 - application/json;+charset=utf-8 1072.2160ms
+2023-11-22 11:32:46.469 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Flight?origin=l - -
+2023-11-22 11:32:46.558 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:32:46.560 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:32:46.627 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 11:32:46.680 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__origin_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[ID], [f].[Arrival], [f].[Departure], [f].[Destination], [f].[Origin], [f].[Status]
+FROM [Flights] AS [f]
+WHERE (@__origin_0 LIKE N'') OR (CHARINDEX(@__origin_0, [f].[Origin]) > 0)
+ORDER BY [f].[Arrival]
+2023-11-22 11:32:46.681 +06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightStatusControlAPI.Models.Flight, FlightStatusControlAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-22 11:32:46.687 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 126.8486ms
+2023-11-22 11:32:46.687 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:32:46.687 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Flight?origin=l - - - 200 - application/json;+charset=utf-8 218.3892ms
+2023-11-22 11:32:51.489 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Flight?origin=t - -
+2023-11-22 11:32:51.494 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:32:51.495 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:32:51.500 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 11:32:51.504 +06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__origin_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[ID], [f].[Arrival], [f].[Departure], [f].[Destination], [f].[Origin], [f].[Status]
+FROM [Flights] AS [f]
+WHERE (@__origin_0 LIKE N'') OR (CHARINDEX(@__origin_0, [f].[Origin]) > 0)
+ORDER BY [f].[Arrival]
+2023-11-22 11:32:51.521 +06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightStatusControlAPI.Models.Flight, FlightStatusControlAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-22 11:32:51.527 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 32.0849ms
+2023-11-22 11:32:51.527 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:32:51.527 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Flight?origin=t - - - 200 - application/json;+charset=utf-8 38.2832ms
+2023-11-22 11:39:20.678 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 11:39:21.152 +06:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 11:39:21.191 +06:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 11:39:21.194 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 11:39:21.195 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 11:39:21.226 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-22 11:39:21.243 +06:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-22 11:39:21.376 +06:00 [INF] User profile is available. Using 'C:\Users\AKERKE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-22 11:39:21.550 +06:00 [INF] Now listening on: https://localhost:7246
+2023-11-22 11:39:21.551 +06:00 [INF] Now listening on: http://localhost:5246
+2023-11-22 11:39:21.554 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-22 11:39:21.554 +06:00 [INF] Hosting environment: Development
+2023-11-22 11:39:21.555 +06:00 [INF] Content root path: C:\Users\AKERKE\source\repos\FlightStatusControlAPI\
+2023-11-22 11:39:22.306 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-11-22 11:39:22.567 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 263.9094ms
+2023-11-22 11:39:22.567 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 11:39:22.567 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 11:39:22.587 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 19.9539ms
+2023-11-22 11:39:22.599 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.2865ms
+2023-11-22 11:39:22.664 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 11:39:22.777 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 112.5547ms
+2023-11-22 11:39:46.506 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Flight - -
+2023-11-22 11:39:46.816 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:39:46.863 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String, System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:39:46.915 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-11-22 11:39:46.926 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 56.4835ms
+2023-11-22 11:39:46.929 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:39:46.935 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Flight - - - 400 - application/problem+json;+charset=utf-8 429.3431ms
+2023-11-22 11:40:06.574 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Flight?origin=j - -
+2023-11-22 11:40:06.582 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:40:06.586 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String, System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:40:06.606 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-11-22 11:40:06.606 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 19.69ms
+2023-11-22 11:40:06.606 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:40:06.606 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Flight?origin=j - - - 400 - application/problem+json;+charset=utf-8 32.0290ms
+2023-11-22 11:40:24.199 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Flight - -
+2023-11-22 11:40:24.201 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:40:24.201 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String, System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:40:24.203 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-11-22 11:40:24.203 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 1.8042ms
+2023-11-22 11:40:24.203 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:40:24.203 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Flight - - - 400 - application/problem+json;+charset=utf-8 4.7323ms
+2023-11-22 11:48:52.151 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Flight - -
+2023-11-22 11:48:52.160 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:48:52.162 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String, System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:48:52.163 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-11-22 11:48:52.163 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 0.6033ms
+2023-11-22 11:48:52.163 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:48:52.163 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Flight - - - 400 - application/problem+json;+charset=utf-8 12.3216ms
+2023-11-22 11:49:07.621 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7246/api/Flight - -
+2023-11-22 11:49:07.621 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:49:07.622 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String, System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:49:07.622 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-11-22 11:49:07.624 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 2.7379ms
+2023-11-22 11:49:07.624 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:49:07.625 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7246/api/Flight - - - 400 - application/problem+json;+charset=utf-8 3.4634ms
+2023-11-22 11:51:41.969 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 11:51:42.420 +06:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 11:51:42.463 +06:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 11:51:42.466 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 11:51:42.467 +06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 11:51:42.492 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-22 11:51:42.508 +06:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-22 11:51:42.645 +06:00 [INF] User profile is available. Using 'C:\Users\AKERKE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-22 11:51:42.839 +06:00 [INF] Now listening on: https://localhost:7246
+2023-11-22 11:51:42.839 +06:00 [INF] Now listening on: http://localhost:5246
+2023-11-22 11:51:42.843 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-22 11:51:42.844 +06:00 [INF] Hosting environment: Development
+2023-11-22 11:51:42.844 +06:00 [INF] Content root path: C:\Users\AKERKE\source\repos\FlightStatusControlAPI\
+2023-11-22 11:51:43.405 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-11-22 11:51:43.671 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 11:51:43.671 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 11:51:43.673 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 270.4976ms
+2023-11-22 11:51:43.692 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 20.6386ms
+2023-11-22 11:51:43.719 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.4011ms
+2023-11-22 11:51:43.772 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 11:51:43.890 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.9970ms
+2023-11-22 11:52:00.909 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Flight - -
+2023-11-22 11:52:01.244 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:52:01.281 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String, System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:52:01.324 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 11:52:01.705 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[ID], [f].[Arrival], [f].[Departure], [f].[Destination], [f].[Origin], [f].[Status]
+FROM [Flights] AS [f]
+ORDER BY [f].[Arrival]
+2023-11-22 11:52:01.784 +06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightStatusControlAPI.Models.Flight, FlightStatusControlAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-22 11:52:01.802 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 513.8652ms
+2023-11-22 11:52:01.804 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:52:01.810 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Flight - - - 200 - application/json;+charset=utf-8 900.6442ms
+2023-11-22 11:52:56.230 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/api/Flight?origin=t - -
+2023-11-22 11:52:56.244 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:52:56.244 +06:00 [INF] Route matched with {action = "GetFlights", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFlights(System.String, System.String) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 11:52:56.318 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 11:52:56.437 +06:00 [INF] Executed DbCommand (41ms) [Parameters=[@__origin_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[ID], [f].[Arrival], [f].[Departure], [f].[Destination], [f].[Origin], [f].[Status]
+FROM [Flights] AS [f]
+WHERE (@__origin_0 LIKE N'') OR (CHARINDEX(@__origin_0, [f].[Origin]) > 0)
+ORDER BY [f].[Arrival]
+2023-11-22 11:52:56.438 +06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightStatusControlAPI.Models.Flight, FlightStatusControlAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-22 11:52:56.439 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI) in 194.1039ms
+2023-11-22 11:52:56.439 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.GetFlights (FlightStatusControlAPI)'
+2023-11-22 11:52:56.439 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/api/Flight?origin=t - - - 200 - application/json;+charset=utf-8 210.9496ms
+2023-11-22 12:00:21.223 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 12:00:21.224 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 1.3460ms
+2023-11-22 12:00:21.224 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 12:00:21.244 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.1836ms
+2023-11-22 12:00:21.323 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 12:00:21.325 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1.2968ms
+2023-11-22 14:33:03.149 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 14:33:03.151 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 14:33:03.151 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 2.1932ms
+2023-11-22 14:33:03.181 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.0194ms
+2023-11-22 14:33:03.395 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 14:33:03.400 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.5187ms
+2023-11-22 16:54:15.346 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 16:54:45.711 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 16:54:47.527 +06:00 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 16:54:47.680 +06:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 16:54:47.690 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 16:54:47.691 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 16:54:47.789 +06:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-22 16:54:47.863 +06:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-22 16:54:48.213 +06:00 [INF] User profile is available. Using 'C:\Users\AKERKE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-22 16:54:48.769 +06:00 [INF] Now listening on: https://localhost:7246
+2023-11-22 16:54:48.769 +06:00 [INF] Now listening on: http://localhost:5246
+2023-11-22 16:54:48.782 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-22 16:54:48.795 +06:00 [INF] Hosting environment: Development
+2023-11-22 16:54:48.797 +06:00 [INF] Content root path: C:\Users\AKERKE\source\repos\FlightStatusControlAPI\
+2023-11-22 16:54:49.462 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-11-22 16:54:50.316 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 16:54:50.316 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 16:54:50.352 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 31.9869ms
+2023-11-22 16:54:50.378 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 934.5024ms
+2023-11-22 16:54:50.398 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 82.2318ms
+2023-11-22 16:54:50.624 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 16:54:51.032 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 408.5213ms
+2023-11-22 16:55:11.294 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/User/token application/json 46
+2023-11-22 16:55:11.587 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 16:55:11.713 +06:00 [INF] Route matched with {action = "GetToken", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetToken(FlightStatusControlAPI.Models.LoginModel) on controller FlightStatusControlAPI.Controllers.UserController (FlightStatusControlAPI).
+2023-11-22 16:55:12.040 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 16:55:13.573 +06:00 [INF] Executed DbCommand (109ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-22 16:55:13.736 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[ID], [u].[Password], [u].[RoleId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)
+2023-11-22 16:55:13.986 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[ID], [r].[Code]
+FROM [Roles] AS [r]
+WHERE [r].[ID] = @__p_0
+2023-11-22 16:55:14.566 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-11-22 16:55:14.612 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI) in 2863.0496ms
+2023-11-22 16:55:14.616 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 16:55:14.634 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/User/token application/json 46 - 200 - application/json;+charset=utf-8 3339.7387ms
+2023-11-22 16:55:54.037 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Flight application/json 159
+2023-11-22 16:55:54.356 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 16:55:54.360 +06:00 [INF] Route matched with {action = "AddFlight", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddFlight(FlightStatusControlAPI.Models.Flight) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 16:55:54.375 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI) in 14.0423ms
+2023-11-22 16:55:54.380 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 16:55:54.463 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'FlightStatusControlAPI.Controllers.FlightController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method60(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\AKERKE\source\repos\FlightStatusControlAPI\Program.cs:line 128
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-11-22 16:55:54.643 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/Flight application/json 159 - 500 - text/plain;+charset=utf-8 605.0943ms
+2023-11-22 16:56:11.043 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Flight application/json 159
+2023-11-22 16:56:11.051 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 16:56:11.052 +06:00 [INF] Route matched with {action = "AddFlight", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddFlight(FlightStatusControlAPI.Models.Flight) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 16:56:11.060 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI) in 7.7634ms
+2023-11-22 16:56:11.061 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 16:56:11.115 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'FlightStatusControlAPI.Controllers.FlightController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method60(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\AKERKE\source\repos\FlightStatusControlAPI\Program.cs:line 128
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-11-22 16:56:11.120 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/Flight application/json 159 - 500 - text/plain;+charset=utf-8 78.1250ms
+2023-11-22 16:58:10.613 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Flight application/json 159
+2023-11-22 16:58:10.622 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 16:58:10.624 +06:00 [INF] Route matched with {action = "AddFlight", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddFlight(FlightStatusControlAPI.Models.Flight) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 16:58:10.630 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI) in 5.5292ms
+2023-11-22 16:58:10.631 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 16:58:10.675 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'FlightStatusControlAPI.Controllers.FlightController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method60(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\AKERKE\source\repos\FlightStatusControlAPI\Program.cs:line 128
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-11-22 16:58:10.679 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/Flight application/json 159 - 500 - text/plain;+charset=utf-8 65.4342ms
+2023-11-22 17:00:18.419 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 17:00:19.809 +06:00 [INF] Executed DbCommand (92ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 17:00:19.977 +06:00 [INF] Executed DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 17:00:19.988 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 17:00:19.989 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 17:00:20.082 +06:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-22 17:00:20.152 +06:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-22 17:00:20.496 +06:00 [INF] User profile is available. Using 'C:\Users\AKERKE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-22 17:00:20.967 +06:00 [INF] Now listening on: https://localhost:7246
+2023-11-22 17:00:20.968 +06:00 [INF] Now listening on: http://localhost:5246
+2023-11-22 17:00:20.977 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-22 17:00:20.978 +06:00 [INF] Hosting environment: Development
+2023-11-22 17:00:20.979 +06:00 [INF] Content root path: C:\Users\AKERKE\source\repos\FlightStatusControlAPI\
+2023-11-22 17:00:21.921 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-11-22 17:00:22.772 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 17:00:22.772 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 17:00:22.801 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 27.1217ms
+2023-11-22 17:00:22.807 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 902.6739ms
+2023-11-22 17:00:22.845 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 73.2009ms
+2023-11-22 17:00:23.070 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 17:00:23.495 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 425.2975ms
+2023-11-22 17:01:06.051 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Flight application/json 159
+2023-11-22 17:01:06.969 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 17:01:07.099 +06:00 [INF] Route matched with {action = "AddFlight", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddFlight(FlightStatusControlAPI.Models.Flight) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 17:02:52.780 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 17:02:54.130 +06:00 [INF] Executed DbCommand (82ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 17:02:54.282 +06:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 17:02:54.291 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 17:02:54.293 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 17:02:54.387 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-22 17:02:54.450 +06:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-22 17:02:54.802 +06:00 [INF] User profile is available. Using 'C:\Users\AKERKE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-22 17:02:55.286 +06:00 [INF] Now listening on: https://localhost:7246
+2023-11-22 17:02:55.286 +06:00 [INF] Now listening on: http://localhost:5246
+2023-11-22 17:02:55.299 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-22 17:02:55.300 +06:00 [INF] Hosting environment: Development
+2023-11-22 17:02:55.300 +06:00 [INF] Content root path: C:\Users\AKERKE\source\repos\FlightStatusControlAPI\
+2023-11-22 17:02:56.364 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-11-22 17:02:57.182 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 17:02:57.182 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 17:02:57.220 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 35.5466ms
+2023-11-22 17:02:57.230 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 883.9993ms
+2023-11-22 17:02:57.259 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 76.2065ms
+2023-11-22 17:02:57.509 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 17:02:57.927 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 418.7026ms
+2023-11-22 17:03:48.764 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/User/token application/json 46
+2023-11-22 17:03:49.691 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 17:03:49.821 +06:00 [INF] Route matched with {action = "GetToken", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetToken(FlightStatusControlAPI.Models.LoginModel) on controller FlightStatusControlAPI.Controllers.UserController (FlightStatusControlAPI).
+2023-11-22 17:03:50.065 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 17:03:51.498 +06:00 [INF] Executed DbCommand (118ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-22 17:03:51.653 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[ID], [u].[Password], [u].[RoleId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)
+2023-11-22 17:03:51.875 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[ID], [r].[Code]
+FROM [Roles] AS [r]
+WHERE [r].[ID] = @__p_0
+2023-11-22 17:04:07.003 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-11-22 17:04:07.043 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI) in 17192.3139ms
+2023-11-22 17:04:07.047 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 17:04:07.064 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/User/token application/json 46 - 200 - application/json;+charset=utf-8 18301.9012ms
+2023-11-22 17:04:34.788 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Flight application/json 159
+2023-11-22 17:04:34.832 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 17:04:34.837 +06:00 [INF] Route matched with {action = "AddFlight", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddFlight(FlightStatusControlAPI.Models.Flight) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 18:02:21.877 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 18:02:23.215 +06:00 [INF] Executed DbCommand (93ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 18:02:23.365 +06:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 18:02:23.373 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 18:02:23.374 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 18:02:23.462 +06:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-22 18:02:23.527 +06:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-22 18:02:23.883 +06:00 [INF] User profile is available. Using 'C:\Users\AKERKE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-22 18:02:24.441 +06:00 [INF] Now listening on: https://localhost:7246
+2023-11-22 18:02:24.441 +06:00 [INF] Now listening on: http://localhost:5246
+2023-11-22 18:02:24.456 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-22 18:02:24.458 +06:00 [INF] Hosting environment: Development
+2023-11-22 18:02:24.459 +06:00 [INF] Content root path: C:\Users\AKERKE\source\repos\FlightStatusControlAPI\
+2023-11-22 18:02:25.283 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-11-22 18:02:26.097 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 18:02:26.097 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 18:02:26.138 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 38.1274ms
+2023-11-22 18:02:26.165 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 901.0105ms
+2023-11-22 18:02:26.186 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 89.0811ms
+2023-11-22 18:02:26.431 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 18:02:26.834 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 402.5358ms
+2023-11-22 18:06:50.467 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/User/token application/json 46
+2023-11-22 18:06:51.370 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 18:06:51.494 +06:00 [INF] Route matched with {action = "GetToken", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetToken(FlightStatusControlAPI.Models.LoginModel) on controller FlightStatusControlAPI.Controllers.UserController (FlightStatusControlAPI).
+2023-11-22 18:06:51.764 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 18:06:53.200 +06:00 [INF] Executed DbCommand (107ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-22 18:06:53.353 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[ID], [u].[Password], [u].[RoleId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)
+2023-11-22 18:06:53.604 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[ID], [r].[Code]
+FROM [Roles] AS [r]
+WHERE [r].[ID] = @__p_0
+2023-11-22 18:07:12.580 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-11-22 18:07:12.624 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI) in 21092.3296ms
+2023-11-22 18:07:12.627 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 18:07:12.646 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/User/token application/json 46 - 200 - application/json;+charset=utf-8 22181.5280ms
+2023-11-22 18:07:40.005 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Flight application/json 159
+2023-11-22 18:07:40.046 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 18:07:40.050 +06:00 [INF] Route matched with {action = "AddFlight", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddFlight(FlightStatusControlAPI.Models.Flight) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 18:17:41.465 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 18:17:42.831 +06:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 18:17:42.983 +06:00 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 18:17:42.995 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-22 18:17:42.996 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-22 18:17:43.096 +06:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-22 18:17:43.162 +06:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-22 18:17:43.508 +06:00 [INF] User profile is available. Using 'C:\Users\AKERKE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-22 18:17:43.986 +06:00 [INF] Now listening on: https://localhost:7246
+2023-11-22 18:17:43.986 +06:00 [INF] Now listening on: http://localhost:5246
+2023-11-22 18:17:43.998 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-22 18:17:44.002 +06:00 [INF] Hosting environment: Development
+2023-11-22 18:17:44.002 +06:00 [INF] Content root path: C:\Users\AKERKE\source\repos\FlightStatusControlAPI\
+2023-11-22 18:17:44.647 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/index.html - -
+2023-11-22 18:17:45.459 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - -
+2023-11-22 18:17:45.459 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/_vs/browserLink - -
+2023-11-22 18:17:45.508 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 45.3488ms
+2023-11-22 18:17:45.519 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/index.html - - - 200 - text/html;charset=utf-8 887.5690ms
+2023-11-22 18:17:45.548 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.7347ms
+2023-11-22 18:17:45.746 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - -
+2023-11-22 18:17:46.136 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7246/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 390.5602ms
+2023-11-22 18:17:55.593 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/User/token application/json 46
+2023-11-22 18:17:56.509 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 18:17:56.635 +06:00 [INF] Route matched with {action = "GetToken", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetToken(FlightStatusControlAPI.Models.LoginModel) on controller FlightStatusControlAPI.Controllers.UserController (FlightStatusControlAPI).
+2023-11-22 18:17:56.846 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 18:17:58.397 +06:00 [INF] Executed DbCommand (108ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-11-22 18:17:58.589 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@__login_0='?' (Size = 4000), @__hash_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[ID], [u].[Password], [u].[RoleId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__login_0) AND ([u].[Password] = @__hash_1)
+2023-11-22 18:17:58.845 +06:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[ID], [r].[Code]
+FROM [Roles] AS [r]
+WHERE [r].[ID] = @__p_0
+2023-11-22 18:17:58.998 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-11-22 18:17:59.031 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI) in 2373.4872ms
+2023-11-22 18:17:59.034 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.UserController.GetToken (FlightStatusControlAPI)'
+2023-11-22 18:17:59.053 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/User/token application/json 46 - 200 - application/json;+charset=utf-8 3460.1382ms
+2023-11-22 18:18:21.526 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7246/api/Flight application/json 159
+2023-11-22 18:18:21.574 +06:00 [INF] Executing endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 18:18:21.579 +06:00 [INF] Route matched with {action = "AddFlight", controller = "Flight"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddFlight(FlightStatusControlAPI.Models.Flight) on controller FlightStatusControlAPI.Controllers.FlightController (FlightStatusControlAPI).
+2023-11-22 18:18:34.644 +06:00 [INF] Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-11-22 18:18:35.117 +06:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = DateTimeOffset), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Flights] ([Arrival], [Departure], [Destination], [Origin], [Status])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [ID]
+FROM [Flights]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2023-11-22 18:18:36.804 +06:00 [INF] Add in the database by user Ers at "2023-11-22T12:18:36.7765565Z"
+2023-11-22 18:18:41.915 +06:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-11-22 18:18:41.916 +06:00 [INF] Executed action FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI) in 20337.1056ms
+2023-11-22 18:18:41.916 +06:00 [INF] Executed endpoint 'FlightStatusControlAPI.Controllers.FlightController.AddFlight (FlightStatusControlAPI)'
+2023-11-22 18:18:41.917 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7246/api/Flight application/json 159 - 200 - text/plain;+charset=utf-8 20396.7162ms

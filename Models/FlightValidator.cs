@@ -6,6 +6,7 @@ namespace FlightStatusControlAPI.Models
     {
         public FlightValidator()
         {
+            RuleFor(f => f.Origin).NotEmpty().WithMessage("Origin is required");
             RuleFor(f => f.Destination).NotEmpty().WithMessage("Destination is required");
         }
     }
